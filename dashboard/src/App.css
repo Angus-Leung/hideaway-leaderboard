@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+.App {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-image: url("https://initiate.alphacoders.com/images/128/cropped-3840-2160-1282982.jpg?9298");
+  background-position: center;
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+}
+
+.App-Leaderboard {
+  width: 600px;
+  height: 200px;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin: 80px auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.LeadColumnHeader {
+  display: flex;
+  align-items: center;
+  background: white;
+  color: black;
+  height: 50px;
+}
+
+.LeaderContent {
+  display: flex;
+  align-items: center;
+  background: white;
+  color: black;
+  height: 50px;
+
+}
+
+.col-xs-1{
+  margin-left: 15px;
+  width: 10%;
+  display:flex;
+  align-items: flex-start;
+}
+
+.col-xs-2{
+  width: 15%;
+  display:flex;
+  align-items: flex-start;
+}
+
+.col-xs-5{
+  
+  width: 40%;
+  display:flex;
+  align-items: flex-start;
+}
+
+.col-xs-3{
+  width: 30%;
+  display:flex;
+  align-items: flex-start;
+}
