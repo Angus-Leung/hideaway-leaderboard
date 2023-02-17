@@ -1,9 +1,13 @@
+import src.constants as constants
+import src.helpers as helpers
 import requests
 from fastapi import FastAPI
+import logging
+import json
 import redis
 r = redis.Redis(host='localhost', port=6379, db=0)
-r.set('foo', 'bar')
-
+logging.basicConfig(level = logging.INFO)
+logger = logging.getLogger()
 app = FastAPI()
 
 
@@ -11,8 +15,24 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
-@app.get("/mmr")
-async def getMMR():
-  # response = requests.get("https://api.henrikdev.xyz/valorant/v1/mmr-history/na/awais/613")
-  # return response.json()
-  return r.get('foo')
+@app.get("/players")
+async def getAllPlayerData():
+    raw_players_data = []
+    for gamer in constants.gamers:
+        logger.info(gamer['name'])
+        if (r.get(gamer['name'])):
+            logger.info("\tLoaded from cache")
+            raw_players_data.append(json.loads(r.get(gamer['name'])))
+        else:
+            response = requests.get(f"https://api.henrikdev.xyz/valorant/v1/mmr-history/na/{gamer['name']}/{gamer['tag']}")
+            if response.status_code != 200:
+                logger.info(f"\tFailed to load {gamer['name']} from henrikdev API")
+            else:
+                logger.info("\tLoaded from henrikdev API")
+                r.set(gamer['name'], response.text)
+                raw_players_data.append(response.json())
+
+    formatted_players_data = helpers.formatRawPlayerData(raw_players_data)
+
+    return formatted_players_data
+
