@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState, useEffect } from "react";
 
 function App() {
   return (
@@ -38,12 +39,22 @@ const LeaderboardColumnHeader = () => {
     </div>
   );
 };
-
 const LeaderboardContent = () => {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/players")
+      .then((res) => res.json())
+      .then((data) => {
+        setPosts(data)
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
   return (
     <>
-      {MockData.map((player, index) => (
-        <div className="LeaderContent">
+      {posts.map((player, index) => (
+        <div className="LeaderContent" key={index}>
           <div className="col-xs-1">
             <h4>{index + 1}</h4>
           </div>
@@ -61,14 +72,5 @@ const LeaderboardContent = () => {
     </>
   );
 };
-
-const MockData = [
-  { elo: 1874, name: "Li Yung", rank: "Ascendant 1" },
-  { elo: 1776, name: "Awais", rank: "Diamond 3" },
-  { elo: 1724, name: "H4zed", rank: "Diamond 3" },
-  { elo: 1720, name: "flashkt5", rank: "Diamond 3" },
-  { elo: 1628, name: "Hydro", rank: "Diamond 2" },
-  { elo: 1521, name: "Jam", rank: "Diamond 1" },
-];
 
 export default App;
