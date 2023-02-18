@@ -1,5 +1,4 @@
 gamers = [
-  {"name": "awais", "tag": "613"},
   {"name": "feniak", "tag": "999"},
   {"name": "flashkt5", "tag": "3794"},
   {"name": "h4zed", "tag": "613"},
@@ -11,4 +10,6 @@ gamers = [
   {"name": "gambit", "tag": "9940"},
   {"name": "1milk5sugar", "tag": "na1"},
   {"name": "cg1151", "tag": "5826"},
+  {"name": "plonk", "tag": "uwu"},
+  {"name": "awais", "tag": "613"},
 ]

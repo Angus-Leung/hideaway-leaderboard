@@ -1,19 +1,19 @@
 import src.constants as constants
 import src.helpers as helpers
 import requests
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 import logging
 import json
 import redis
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
 r = redis.Redis(host='localhost', port=6379, db=0)
 logging.basicConfig(level = logging.INFO)
 logger = logging.getLogger()
 app = FastAPI()
-origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -29,7 +29,7 @@ async def getAllPlayerData():
     raw_players_data = []
     for gamer in constants.gamers:
         logger.info(gamer['name'])
-        if (r.get(gamer['name'])):
+        if r.get(gamer['name']):
             logger.info("\tLoaded from cache")
             raw_players_data.append(json.loads(r.get(gamer['name'])))
         else:

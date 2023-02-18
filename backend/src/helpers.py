@@ -9,7 +9,7 @@ def formatRawPlayerData (raw_player_data):
         player_data = {
             "elo": raw_data["data"][0]["elo"],
             "name": raw_data["name"],
-            "rank": raw_data["data"][0]["currenttierpatched"]
+            "rankUri": raw_data["data"][0]["currenttierpatched"].replace(' ', '_') + ('_Rank.png')
             }
         formatted_player_data.append(player_data)
 

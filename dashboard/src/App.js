@@ -66,7 +66,7 @@ const LeaderboardContent = () => {
             <h4>{player.name}</h4>
           </div>
           <div className="col-xs-3">
-            <h4>{player.rank}</h4>
+            <img className="pics" src={`resources/valorantRanks/${player.rankUri}`} alt="valRank"></img>
           </div>
         </div>
       ))}
