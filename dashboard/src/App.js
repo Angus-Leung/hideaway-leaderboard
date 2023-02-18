@@ -39,13 +39,14 @@ const LeaderboardColumnHeader = () => {
     </div>
   );
 };
+
 const LeaderboardContent = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     fetch("http://127.0.0.1:8000/players")
       .then((res) => res.json())
       .then((data) => {
-        setPosts(data)
+        setPosts(data);
       })
       .catch((err) => {
         console.log(err.message);
