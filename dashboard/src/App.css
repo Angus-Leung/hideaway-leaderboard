@@ -5,64 +5,86 @@
   height: 100vh;
   width: 100vw;
   text-align: center;
-  background-image: url("/resources/valorantWallpaper.jpg");
+  background-image: url("../public/resources/valorantWallpaper.jpg");
   background-position: center;
   background-size:cover;
   display: flex;
   justify-content: center;
 }
 
+.leaderboardheader{
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-radius: 5px 5px 0 0;
+}
+
 .App-Leaderboard {
   width: 600px;
-  height: 200px;
-  background-color: #282c34;
+  height: 150px;
+  background-color: #282c34ad;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
   margin: 80px auto;
   border-radius: 5px 5px 0 0;
+
 }
 
 .LeadColumnHeader {
   display: flex;
   align-items: center;
-  background: white;
+  background: rgba(248, 248, 248, 0.772);
   color: black;
   height: 50px;
 }
 
-.LeaderContent {
+.LeaderContent{
   display: flex;
   align-items: center;
-  background: white;
   color: black;
+  background: white;
   height: 50px;
+}
 
+.LeaderContent:nth-child(odd) {
+  background-color: rgba(220, 219, 219, 0.766);
+}
+
+.LeaderContent:nth-child(even) {
+  background-color: rgba(150, 150, 150, 0.9);
 }
 
 .col-xs-1{
-  margin-left: 15px;
   width: 10%;
   display:flex;
   align-items: flex-start;
+  padding-left: 25px;
 }
 
 .col-xs-2{
   width: 15%;
   display:flex;
   align-items: flex-start;
+  padding-left: 25px;
 }
 
 .col-xs-5{
-  
   width: 40%;
   display:flex;
   align-items: flex-start;
+  padding-left: 75px;
 }
 
 .col-xs-3{
   width: 30%;
   display:flex;
-  align-items: flex-start;
+  justify-content: end;
+  padding-right: 25px;
+  
+}
+
+.pics{
+  height: 50px;
+  width: 50px;
 }
