@@ -4,6 +4,7 @@ import requests
 import logging
 import json
 import redis
+from datetime import datetime
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -36,12 +37,14 @@ async def getAllPlayerData():
             raw_players_data.append(json.loads(r.get(gamer['name'])))
         else:
             response = requests.get(f"https://api.henrikdev.xyz/valorant/v1/mmr-history/na/{gamer['name']}/{gamer['tag']}")
+            response_json = response.json()
+            response_json["last_retrieved"] = str(datetime.now())
             if response.status_code != 200:
                 logger.info(f"\tFailed to load {gamer['name']} from henrikdev API")
             else:
                 logger.info("\tLoaded from henrikdev API")
-                r.set(gamer['name'], response.text)
-                raw_players_data.append(response.json())
+                r.set(gamer['name'], json.dumps(response_json))
+                raw_players_data.append(response_json)
 
     formatted_players_data = helpers.formatRawPlayerData(raw_players_data)
 
