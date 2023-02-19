@@ -40,10 +40,26 @@ const LeaderboardColumnHeader = () => {
   );
 };
 
+const ranks = {
+  1: "🥇",
+  2: "🥈",
+  3: "🥉",
+  4: "💩",
+}
+
+const getRanking = (number, length) => {
+  if (number <= 3)
+    return ranks[number];
+  else if(number === length)
+    return ranks[4];
+  else
+    return number;
+}
+
 const LeaderboardContent = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch("http://18.191.238.238/players")
+    fetch("http://18.191.238.238/players") // http://18.191.238.238/players  http://127.0.0.1:8000/players
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);
@@ -57,13 +73,13 @@ const LeaderboardContent = () => {
       {posts.map((player, index) => (
         <div className="LeaderContent" key={index}>
           <div className="col-xs-1">
-            <h4>{index + 1}</h4>
+            <p className="player-row-rank">{getRanking(index + 1, posts.length)}</p>
           </div>
           <div className="col-xs-2">
-            <h4>{player.elo}</h4>
+            <p className="player-row-text">{player.elo}</p>
           </div>
           <div className="col-xs-5">
-            <h4>{player.name}</h4>
+            <p className="player-row-text">{player.name}</p>
           </div>
           <div className="col-xs-3">
             <img className="pics" src={`resources/valorantRanks/${player.rankUri}`} alt="valRank"></img>

@@ -20,7 +20,7 @@
 
 .App-Leaderboard {
   width: 600px;
-  height: 150px;
+  height: 130px;
   background-color: #282c34ad;
   display: flex;
   flex-direction: column;
@@ -55,11 +55,16 @@
   background-color: rgba(150, 150, 150, 0.9);
 }
 
+.player-row-text{
+  font-family: cursive;
+  font-weight:lighter;
+}
+
 .col-xs-1{
   width: 10%;
   display:flex;
-  align-items: flex-start;
-  padding-left: 25px;
+  justify-content: center;
+  padding-left: 5px;
 }
 
 .col-xs-2{
@@ -72,7 +77,6 @@
 .col-xs-5{
   width: 40%;
   display:flex;
-  align-items: flex-start;
   padding-left: 75px;
 }
 
@@ -81,7 +85,6 @@
   display:flex;
   justify-content: end;
   padding-right: 25px;
-  
 }
 
 .pics{
