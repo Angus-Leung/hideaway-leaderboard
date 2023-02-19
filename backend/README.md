@@ -13,7 +13,14 @@ brew install redis # mac
 
 ## Run Locally
 ```
-sudo service redis-server start 
-cd backend 
+sudo service redis-server start
+cd backend
+redis-server
 uvicorn src.api:app --reload
+(Optional to check contents in redis) redis-cli
+```
+
+## Deployment Steps
+```
+
 ```

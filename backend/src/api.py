@@ -11,6 +11,8 @@ r = redis.Redis(host='localhost', port=6379, db=0)
 logging.basicConfig(level = logging.INFO)
 logger = logging.getLogger()
 app = FastAPI()
+
+origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
