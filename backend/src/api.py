@@ -36,7 +36,8 @@ async def getAllPlayerData():
             logger.info("\tLoaded from cache")
             raw_players_data.append(json.loads(r.get(gamer['name'])))
         else:
-            response = requests.get(f"https://api.henrikdev.xyz/valorant/v1/mmr-history/na/{gamer['name']}/{gamer['tag']}")
+            #TODO response = requests.get(f"https://api.henrikdev.xyz/valorant/v1/mmr/na/{gamer['name']}/{gamer['tag']}")
+            response = requests.get(f"https://api.henrikdev.xyz/valorant/v1/mmr/na/{gamer['name']}/{gamer['tag']}") # https://api.henrikdev.xyz/valorant/v1/mmr-history/na/{gamer['name']}/{gamer['tag']}
             response_json = response.json()
             response_json["last_retrieved"] = str(datetime.now())
             if response.status_code != 200:

@@ -7,12 +7,12 @@
   text-align: center;
   background-image: url("../public/resources/valorantWallpaper.jpg");
   background-position: center;
-  background-size:cover;
+  background-size: contain;
   display: flex;
   justify-content: center;
 }
 
-.leaderboardheader{
+.leaderboardheader {
   border-style: solid;
   border-color: rgb(0, 0, 0);
   border-radius: 5px 5px 0 0;
@@ -24,11 +24,10 @@
   background-color: #282c34ad;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: white;
-  margin: 80px auto;
+  margin: 40px;
   border-radius: 5px 5px 0 0;
-
 }
 
 .LeadColumnHeader {
@@ -39,12 +38,13 @@
   height: 50px;
 }
 
-.LeaderContent{
+.LeaderContent {
   display: flex;
   align-items: center;
   color: black;
   background: white;
   height: 50px;
+  position: relative;
 }
 
 .LeaderContent:nth-child(odd) {
@@ -55,39 +55,73 @@
   background-color: rgba(150, 150, 150, 0.9);
 }
 
-.player-row-text{
-  font-family: cursive;
-  font-weight:lighter;
+.player-row-text {
+  font-family:monospace;
+  font-weight: lighter;
+  margin: 0px;
 }
 
-.col-xs-1{
+.player-row-rank {
+  margin: 0px;
+}
+
+.col-xs-1 {
   width: 10%;
-  display:flex;
+  display: flex;
   justify-content: center;
   padding-left: 5px;
+  margin: 0px;
 }
 
-.col-xs-2{
+.col-xs-2 {
   width: 15%;
-  display:flex;
+  display: flex;
   align-items: flex-start;
   padding-left: 25px;
+  margin: 0px;
 }
 
-.col-xs-5{
+.col-xs-5 {
   width: 40%;
-  display:flex;
+  display: flex;
   padding-left: 75px;
+  margin: 0px;
 }
 
-.col-xs-3{
+.col-xs-3 {
   width: 30%;
-  display:flex;
+  display: flex;
+  margin: 0px;
   justify-content: end;
   padding-right: 25px;
 }
 
-.pics{
+.pics {
   height: 50px;
   width: 50px;
+}
+
+div#container {
+  background-color: rgb(41, 45, 64);
+  width: 500px;
+  height: 600px;
+  overflow: hidden; /* hides horizontal scrollbar on newer browsers */
+  min-height: 317px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 15px;
+  position: absolute;
+  top: 200px;
+  right: 100px;
+}
+
+iframe#embed {
+  width: 1000px; /* set this to approximate width of entire page you're embedding */
+  height: 3000px; /* determines where the bottom of the page cuts off */
+  margin-top: -1500px; /* clipping top of page */
+  margin-left: -2px;
+  overflow: hidden;
+  zoom: 0.5;
+  resize: none;
 }

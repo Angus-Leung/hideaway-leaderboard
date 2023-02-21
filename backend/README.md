@@ -22,5 +22,5 @@ uvicorn src.api:app --reload
 
 ## Deployment Steps
 ```
-
+TODO: update angoose
 ```

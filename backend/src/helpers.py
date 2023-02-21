@@ -7,9 +7,10 @@ def formatRawPlayerData (raw_player_data):
     for raw_data in raw_player_data:
         logger.info(raw_data)
         player_data = {
-            "elo": raw_data["data"][0]["elo"],
-            "name": raw_data["name"],
-            "rankUri": raw_data["data"][0]["currenttierpatched"].replace(' ', '_') + ('_Rank.png')
+            "elo": raw_data["data"]["elo"],
+            "name": raw_data["data"]["name"],
+            "rankUri": raw_data["data"]["currenttierpatched"].replace(' ', '_') + ('_Rank.png'),
+            "tag": raw_data["tag"]
             }
         formatted_player_data.append(player_data)
 
