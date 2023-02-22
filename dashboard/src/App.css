@@ -5,9 +5,6 @@
   height: 100vh;
   width: 100vw;
   text-align: center;
-  background-image: url("../public/resources/valorantWallpaper.jpg");
-  background-position: center;
-  background-size: contain;
   display: flex;
   justify-content: center;
 }
@@ -56,7 +53,7 @@
 }
 
 .player-row-text {
-  font-family:monospace;
+  font-family: monospace;
   font-weight: lighter;
   margin: 0px;
 }
@@ -84,7 +81,7 @@
 .col-xs-5 {
   width: 40%;
   display: flex;
-  padding-left: 75px;
+  padding-left: 40px;
   margin: 0px;
 }
 
@@ -92,8 +89,11 @@
   width: 30%;
   display: flex;
   margin: 0px;
-  justify-content: end;
-  padding-right: 25px;
+  justify-content: center;
+}
+
+.col-xs-4 {
+  padding-right: 10px;
 }
 
 .pics {
@@ -101,10 +101,16 @@
   width: 50px;
 }
 
+.pic {
+  height: 30px;
+  width: 48px;
+  margin-top: 8px;
+}
+
 div#container {
   background-color: rgb(41, 45, 64);
   width: 500px;
-  height: 600px;
+  height: 595px;
   overflow: hidden; /* hides horizontal scrollbar on newer browsers */
   min-height: 317px;
   border-style: solid;
@@ -112,7 +118,7 @@ div#container {
   border-color: black;
   border-radius: 15px;
   position: absolute;
-  top: 200px;
+  top: 300px;
   right: 100px;
 }
 
@@ -124,4 +130,14 @@ iframe#embed {
   overflow: hidden;
   zoom: 0.5;
   resize: none;
+  pointer-events: none;
+}
+
+.dis{
+  top: 15px;
+  right: 200px;
+  max-width: 300px;
+  position: absolute;
+  resize: none;
+
 }
