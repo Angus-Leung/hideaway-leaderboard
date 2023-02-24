@@ -1,4 +1,3 @@
-// import Display from "./Display";
 import { useState, useEffect } from "react";
 import IFrame from "./IFrame";
 import React from "react";
@@ -32,7 +31,7 @@ const Leaderboard = () => {
         <div className="col-xs-3">
           <h4>Rank</h4>
         </div>
-        <div>
+        <div className="col-xs-6">
         <img
                 className="pic"
                 src='resources/valo.png'
@@ -63,7 +62,7 @@ const Leaderboard = () => {
     const onShow = (e, player) => {
         const playerObject = {name: player.name, tag: player.tag};
         setSelectedPlayer(playerObject);
-        setHasRender(hasRender === true ? false : true);
+        setHasRender(!hasRender);
     };
     useEffect(() => {
       fetch("http://18.191.238.238/players") // http://18.191.238.238/players  http://127.0.0.1:8000/players
@@ -102,8 +101,7 @@ const Leaderboard = () => {
             </div>
           </div>
         ))}
-        {/* <Display></Display> */}
-        {hasRender && <IFrame name={selectedPlayer.name} tag={selectedPlayer.tag}></IFrame>}
+        {hasRender && <IFrame name={selectedPlayer.name} tag={selectedPlayer.tag}/>}
       </>
     );
   };

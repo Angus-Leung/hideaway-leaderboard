@@ -33,6 +33,7 @@
   background: rgba(248, 248, 248, 0.772);
   color: black;
   height: 50px;
+  margin: 0px;
 }
 
 .LeaderContent {
@@ -86,14 +87,24 @@
 }
 
 .col-xs-3 {
-  width: 30%;
+  width: 10%;
   display: flex;
   margin: 0px;
   justify-content: center;
 }
 
 .col-xs-4 {
-  padding-right: 10px;
+  width: 10%;
+  display: flex;
+  margin: 0px;
+  justify-content: right;
+}
+
+.col-xs-6 {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0px;
+  width: 70px;
 }
 
 .pics {
@@ -107,19 +118,33 @@
   margin-top: 8px;
 }
 
-div#container {
-  background-color: rgb(41, 45, 64);
+div#iframeprofile {
+  background-color: rgba(41, 45, 64, 0);
   width: 500px;
-  height: 595px;
+  height: 590px;
   overflow: hidden; /* hides horizontal scrollbar on newer browsers */
-  min-height: 317px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: black;
-  border-radius: 15px;
   position: absolute;
-  top: 300px;
+  top: 100px;
   right: 100px;
+  border-radius: 5px;
+  border-style: solid;
+  border-bottom: solid;
+  border-color: black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.iframeprofilecontent {
+  position: relative;
+}
+
+div#container {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: black;
+  background-color: rgb(41, 45, 64);
+  overflow: hidden; /* hides horizontal scrollbar on newer browsers */
 }
 
 iframe#embed {
@@ -133,11 +158,9 @@ iframe#embed {
   pointer-events: none;
 }
 
-.dis{
-  top: 15px;
-  right: 200px;
-  max-width: 300px;
+.dis {
   position: absolute;
-  resize: none;
-
+  top: 6px;
+  right: 8px;
+  max-height: 110px;
 }
