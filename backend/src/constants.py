@@ -15,4 +15,5 @@ gamers = [
   {"name": "crowKAKAWWW", "tag": "na1"},
   {"name": "daffyduck", "tag": "duck"},
   {"name": "thatswhatshezed", "tag": "na1"},
+  {"name": "1milk5sugar", "tag": "na1"},
 ]
