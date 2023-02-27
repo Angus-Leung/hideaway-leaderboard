@@ -4,6 +4,7 @@ import React from "react";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExpand } from '@fortawesome/free-solid-svg-icons'
+import ClipFrame from "./VideoFrame";
 library.add(faExpand);
 
 const Leaderboard = () => {
@@ -77,7 +78,7 @@ const Leaderboard = () => {
     return (
       <>
         {posts.map((player, index) => (
-          <div className="LeaderContent" key={index} onClick={(e) => onShow(e, player)} tabIndex="0" onBlur={() => setHasRender(false)}>
+          <div className="LeaderContent" key={index} onClick={(e) => onShow(e, player)} tabIndex="0" onBlur={() => setHasRender(true)}>
             <div className="col-xs-1">
               <p className="player-row-rank">
                 {getRanking(index + 1, posts.length)}
@@ -102,6 +103,7 @@ const Leaderboard = () => {
           </div>
         ))}
         {hasRender && <IFrame name={selectedPlayer.name} tag={selectedPlayer.tag}/>}
+        {hasRender && <ClipFrame name={selectedPlayer.name}/>}
       </>
     );
   };
