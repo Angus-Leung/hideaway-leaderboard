@@ -1,18 +1,19 @@
 import ReactPlayer from "react-player";
 
 const clip = {
-  hydro: "key2A96tcYQ",
-  plonk: "seena",
-  xmanj: "xman",
+  hydro: "TjGDU_3Gj3g",
+  plonk: "0DlrNK-xWjo",
+  xmanj: "6vpK3SZjr0g",
   feniak: "rkt",
   "li yung": "4qxqEKlLTEk",
   flashkt5: "flash",
-  awais: "awais",
+  awais: "qkv36Mnd6NA",
   crowkakawww: "XaRUG75D3b4",
   bakedassh0le: "bob",
   h4zed: "hazed",
-  jam: "fbqbVCRUkgs",
+  jam: "Oy08OTlVG7c",
   thatswhatshezed: "fotus",
+  cros92: "sgdA-j6D8wo",
   default: "leo",
 };
 const ClipFrame = ({ name }) => {
