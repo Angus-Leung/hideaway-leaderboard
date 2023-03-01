@@ -128,11 +128,7 @@ div#iframeprofile {
   right: 100px;
   border-radius: 5px;
   border-style: solid;
-  border-bottom: solid;
   border-color: black;
-  border-top: none;
-  border-left: none;
-  border-right: none;
 }
 
 .player-clip{
@@ -148,15 +144,14 @@ div#iframeprofile {
 
 .iframeprofilecontent {
   position: relative;
+  height: 590px;
 }
 
 
 div#container {
-  border-radius: 5px;
-  border-style: solid;
-  border-color: black;
   background-color: rgb(41, 45, 64);
   overflow: hidden; /* hides horizontal scrollbar on newer browsers */
+  height: 590px;
 }
 
 iframe#embed {

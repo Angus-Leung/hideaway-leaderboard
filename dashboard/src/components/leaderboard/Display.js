@@ -11,7 +11,7 @@ const Display = ({ name }) => {
 };
 
 const playerMap = {
-  hydro: "Hydro.png",
+  hydro: "hydro.png",
   plonk: "seena.gif",
   xmanj: "xman.png",
   feniak: "rkt.png",
