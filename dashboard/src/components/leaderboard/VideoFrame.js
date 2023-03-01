@@ -11,7 +11,7 @@ const clip = {
   crowkakawww: "XaRUG75D3b4",
   bakedassh0le: "bob",
   h4zed: "hazed",
-  jam: "Oy08OTlVG7c",
+  jam: "XLH1OM3F6kM",
   thatswhatshezed: "fotus",
   cros92: "sgdA-j6D8wo",
   default: "leo",
