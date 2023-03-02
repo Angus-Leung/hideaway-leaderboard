@@ -14,6 +14,7 @@ const clip = {
   jam: "XLH1OM3F6kM",
   thatswhatshezed: "fotus",
   cros92: "sgdA-j6D8wo",
+  gambit: "TMnQQutXIBs",
   default: "leo",
 };
 const ClipFrame = ({ name }) => {
