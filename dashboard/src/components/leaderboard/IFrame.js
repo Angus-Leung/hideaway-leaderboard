@@ -10,16 +10,18 @@ const IFrame = ({ name, tag }) => {
     });
   }, []);
   return (
-    <div id="iframeprofile">
-      <div className="iframeprofilecontent">
-        {hasRender && <Display name={name} />}
-        <div id="container">
-          <iframe
-            ref={IFrameRef}
-            title="playercard"
-            id="embed"
-            src={`https://tracker.gg/valorant/profile/riot/${name}%23${tag}/overview`}
-          ></iframe>
+    <div className="iframe-div">
+      <div id="iframeprofile">
+        <div className="iframe-profile-picture">
+          {hasRender && <Display name={name} />}
+          <div>
+            <iframe
+              ref={IFrameRef}
+              title="playercard"
+              id="embed"
+              src={`https://tracker.gg/valorant/profile/riot/${name}%23${tag}/overview`}
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>

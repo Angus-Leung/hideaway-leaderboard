@@ -12,14 +12,14 @@ const clip = {
   bakedassh0le: "Vvq-LSt8YG8",
   h4zed: "hazed",
   jam: "XLH1OM3F6kM",
-  thatswhatshezed: "fotus",
+  thatswhatshezed: "-DEJKwTUQuY",
   cros92: "sgdA-j6D8wo",
   gambit: "TMnQQutXIBs",
   default: "leo",
 };
+
 const ClipFrame = ({ name }) => {
   return (
-    <div className="player-clip">
       <ReactPlayer
         url={`https://youtu.be/${clip[name.toLowerCase()]}`}
         config={{
@@ -29,11 +29,10 @@ const ClipFrame = ({ name }) => {
         }}
         playing={true}
         width="100%"
-        height="100%"
+        height="350px"
         volume=".2"
         controls="false"
       />
-    </div>
   );
 };
 
