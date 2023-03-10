@@ -1,201 +1,176 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-.App {
-  font-family: "Montserrat", sans-serif;
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  overflow: auto;
+@media only screen and (max-width: 3840px) {
+  .App {
+    font-family: "Montserrat", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+  }
+
+  .leaderboard-row-content {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .leaderboardheader {
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+  }
+
+  .App-Leaderboard {
+    width: 800px;
+    height: 180px;
+    background-color: #05050670;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(8px + 2vmin);
+    color: white;
+    margin-top: 40px;
+  }
+
+  .LeadColumnHeader {
+    display: flex;
+    align-items: center;
+    background: rgba(248, 248, 248, 0.772);
+    color: black;
+    margin: 0px;
+    justify-content: space-around;
+    text-align: start;
+  }
+
+  .LeaderContent {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background: white;
+    position: relative;
+  }
+
+  .LeaderContent:nth-child(odd) {
+    background-color: rgba(220, 219, 219, 0.766);
+  }
+
+  .LeaderContent:nth-child(even) {
+    background-color: rgba(150, 150, 150, 0.9);
+  }
+
+  .player-row-text {
+    font-family: monospace;
+    font-weight: lighter;
+    margin: 0px;
+  }
+
+  .player-row-rank {
+    padding-right: 10px;
+    margin: 0px;
+  }
+
+  .rank-header {
+    width: 5%;
+    padding-left: 35px;
+  }
+
+  .elo-header {
+    width: 15%;
+  }
+
+  .player-header {
+    width: 30%;
+  }
+
+  .rank-pic-header {
+    width: 10%;
+    padding-left: 40px;
+  }
+
+  .leaderboard-rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rank-col {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    padding-left: 5px;
+    margin: 0px;
+  }
+
+  .elo-col {
+    width: 15%;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 25px;
+    margin: 0px;
+  }
+
+  .player-name-col {
+    width: 40%;
+    display: flex;
+    padding-left: 40px;
+    margin: 0px;
+  }
+
+  .rank-pic-col {
+    width: 10%;
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+  }
+
+  .expand-col {
+    width: 10%;
+    display: flex;
+    margin: 0px;
+    justify-content: right;
+  }
+
+  .rank-pic {
+    height: 50px;
+    width: 50px;
+  }
+
+  .valo-pic {
+    height: 30px;
+    width: 48px;
+    margin-top: 8px;
+  }
+
+  h4 {
+    margin: 0px;
+  }
 }
 
-.leaderboard-row-content{
-  height:100%;
-  overflow:hidden;
-}
+@media only screen and (max-width: 1920px) {
+  .App-Leaderboard {
+    width: 600px;
+  }
 
-.react-frame{
-  border-style: solid;
-}
+  .App-Leaderboard {
+    height: 160px;
+  }
 
-.leaderboardheader {
-  border-style: solid;
-  border-color: rgb(0, 0, 0);
-}
+  .rank-header {
+    padding-left: 16px;
+  }
 
-.App-Leaderboard {
-  width: 600px;
-  height: 120px;
-  background-color: #05050670;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(8px + 2vmin);
-  color: white;
-  margin: 40px;
-}
+  .elo-header {
+    padding-left: 20px;
+  }
 
-.LeadColumnHeader {
-  display: flex;
-  align-items: center;
-  background: rgba(248, 248, 248, 0.772);
-  color: black;
-  margin: 0px;
-  justify-content: space-around;
-  text-align: start;
-}
+  .player-header {
+    padding-left: 20px;
+  }
 
-.LeaderContent {
-  display: flex;
-  flex-direction: column;
-  color: black;
-  background: white;
-  position: relative;
-}
-
-.LeaderContent:nth-child(odd) {
-  background-color: rgba(220, 219, 219, 0.766);
-}
-
-.LeaderContent:nth-child(even) {
-  background-color: rgba(150, 150, 150, 0.9);
-}
-
-.player-row-text {
-  font-family: monospace;
-  font-weight: lighter;
-  margin: 0px;
-}
-
-.player-row-rank {
-  margin: 0px;
-}
-
-.rank-header {
-  width: 5%;
-  padding-left: 35px;
-}
-
-.elo-header {
-  padding-left: 35px;
-  width: 20%;
-}
-
-.player-header {
-  width: 40%;
-  padding-left: 5px;
-}
-
-.rank-pic-header {
-  width: 15%;
-}
-
-.expand-header {
-  padding-right: 0px;
-}
-
-.leaderboard-rows {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rank-col {
-  width: 10%;
-  display: flex;
-  justify-content: center;
-  padding-left: 5px;
-  margin: 0px;
-}
-
-.elo-col {
-  width: 15%;
-  display: flex;
-  align-items: flex-start;
-  padding-left: 25px;
-  margin: 0px;
-}
-
-.player-name-col {
-  width: 40%;
-  display: flex;
-  padding-left: 40px;
-  margin: 0px;
-}
-
-.rank-pic-col {
-  width: 10%;
-  display: flex;
-  margin: 0px;
-  justify-content: center;
-}
-
-.expand-col {
-  width: 10%;
-  display: flex;
-  margin: 0px;
-  justify-content: right;
-}
-
-.rank-pic {
-  height: 50px;
-  width: 50px;
-}
-
-.valo-pic {
-  height: 30px;
-  width: 48px;
-  margin-top: 8px;
-}
-
-div#iframeprofile {
-  width: 580px;
-  height: 415px;
-  overflow: hidden; /* hides horizontal scrollbar on newer browsers */
-  border-style: solid;
-  border-color: black;
-}
-
-h4 {
-  margin: 0px;
-}
-
-.player-clip {
-  top: 250px;
-  left: 50px;
-  border-style: solid;
-  border-radius: 5px;
-  border-color: black;
-  width: 550px;
-  height: 310px;
-  position: absolute;
-}
-
-.iframe-profile-picture {
-  position: relative;
-}
-
-.iframe-div {
-  padding-top: 4px;
-  justify-content: center;
-  display: flex;
-  width: 100%;
-}
-
-iframe#embed {
-  width: 1450px; /* set this to approximate width of entire page you're embedding */
-  height: 3600px; /* determines where the bottom of the page cuts off */
-  margin-top: -1900px; /* clipping top of page */
-  margin-left: -2px;
-  zoom: 0.4;
-
-}
-
-.profile-pictures {
-  position: absolute;
-  top: 6px;
-  right: 8px;
-  max-height: 100px;
+  .expand-col {
+    justify-content: center;
+    padding-left: 6px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -203,14 +178,9 @@ iframe#embed {
     background-image: url("https://rare-gallery.com/mocahbig/394521-valorant-game-agents-hero-4k-pc-wallpaper.jpg");
   }
 
-  .playercard {
-    width: 900px;
-    height: 3700px;
-    margin-top: -2050px;
-    margin-left: -2px;
-    overflow: hidden;
-    zoom: 0.2;
-    resize: none;
+  .App-Leaderboard {
+    height: 120px;
+    margin: 40px;
   }
 
   .leaderboardheader {
@@ -222,29 +192,6 @@ iframe#embed {
     top: 6px;
     right: 0px;
     max-height: 90px;
-  }
-
-  iframe#embed {
-    width: 1700px;
-    height: 10000px;
-    margin-top: -4100px;
-    margin-left: -4px;
-    overflow: hidden;
-    zoom: 0.2;
-    resize: none;
-  }
-
-  div#iframeprofile {
-    background-color: rgba(41, 45, 64, 0);
-    width: 500px;
-    height: 700px;
-    overflow: hidden;
-    top: 100px;
-    right: 100px;
-    border-style: solid;
-    border-color: black;
-    justify-content: center;
-    align-items: center;
   }
 
   .rank-header {

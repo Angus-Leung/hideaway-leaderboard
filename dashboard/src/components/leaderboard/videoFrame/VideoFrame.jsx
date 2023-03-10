@@ -1,4 +1,5 @@
 import ReactPlayer from "react-player";
+import "./VideoFrame.css"
 
 const clip = {
   hydro: "TjGDU_3Gj3g",
@@ -22,7 +23,6 @@ const clip = {
 const ClipFrame = ({ name }) => {
   return (
     <div className="react-frame">
-
       <ReactPlayer
         url={`https://youtu.be/${clip[name.toLowerCase()]}`}
         config={{
@@ -38,8 +38,8 @@ const ClipFrame = ({ name }) => {
         border-style="solid"
         border-size="1.5px"
         boder-color="black"
-        />
-        </div>
+      />
+    </div>
   );
 };
 

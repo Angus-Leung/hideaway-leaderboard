@@ -1,4 +1,5 @@
-import Display from "./Display";
+import Display from "../displayPics/Display";
+import "./IFrame.css";
 import { useRef, useState, useEffect } from "react";
 
 const IFrame = ({ name, tag }) => {

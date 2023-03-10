@@ -1,0 +1,47 @@
+.iframe-div {
+  padding-top: 4px;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+iframe#embed {
+  width: 1450px; /* set this to approximate width of entire page you're embedding */
+  height: 3600px; /* determines where the bottom of the page cuts off */
+  margin-top: -1900px; /* clipping top of page */
+  margin-left: -2px;
+  zoom: 0.4;
+}
+
+div#iframeprofile {
+  width: 580px;
+  height: 415px;
+  overflow: hidden; /* hides horizontal scrollbar on newer browsers */
+  border-style: solid;
+  border-color: black;
+}
+
+@media only screen and (max-width: 900px) {
+    iframe#embed {
+        width: 1700px;
+        height: 10000px;
+        margin-top: -4100px;
+        margin-left: -4px;
+        overflow: hidden;
+        zoom: 0.2;
+        resize: none;
+      }
+    
+      div#iframeprofile {
+        background-color: rgba(41, 45, 64, 0);
+        width: 600px;
+        height: 710px;
+        overflow: hidden;
+        top: 100px;
+        right: 100px;
+        border-style: solid;
+        border-color: black;
+        justify-content: center;
+        align-items: center;
+      }
+}

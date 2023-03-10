@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import IFrame from "./IFrame";
+import IFrame from "./iframe/IFrame";
 import React from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExpand } from "@fortawesome/free-solid-svg-icons";
-import ClipFrame from "./VideoFrame";
+import ClipFrame from "./videoFrame/VideoFrame";
 library.add(faExpand);
 
 const Leaderboard = () => {
@@ -13,10 +13,9 @@ const Leaderboard = () => {
       <h2>Leaderboard</h2>
       <LeaderboardColumnHeader />
 
-    <div className="leaderboard-row-content">
-
-      <LeaderboardContent />
-    </div>
+      <div className="leaderboard-row-content">
+        <LeaderboardContent />
+      </div>
     </div>
   );
 };
@@ -94,7 +93,6 @@ const LeaderboardContent = () => {
               <p className="player-row-text">{player.elo}</p>
             </div>
             <div className="player-name-col">
-
               <p className="player-row-text">{player.name}</p>
             </div>
             <div className="rank-pic-col">
@@ -109,9 +107,11 @@ const LeaderboardContent = () => {
             </div>
           </div>
           {hasRender && player.name === selectedPlayer.name && (
-            <div style={{padding:'6px'}}>
-              {hasRender && <ClipFrame name={selectedPlayer.name}/>}
-              {hasRender && <IFrame name={selectedPlayer.name} tag={selectedPlayer.tag}/>}
+            <div style={{ padding: "6px" }}>
+              {hasRender && <ClipFrame name={selectedPlayer.name} />}
+              {hasRender && (
+                <IFrame name={selectedPlayer.name} tag={selectedPlayer.tag} />
+              )}
             </div>
           )}
         </div>

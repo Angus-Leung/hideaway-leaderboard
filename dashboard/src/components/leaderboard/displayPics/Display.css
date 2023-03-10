@@ -1,0 +1,10 @@
+.profile-pictures {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  max-height: 100px;
+}
+
+.iframe-profile-picture {
+  position: relative;
+}
