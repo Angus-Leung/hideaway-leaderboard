@@ -30,10 +30,7 @@ jobs:
       - aws-cli/setup:
           profile-name: default
       - run: |
-          aws s3 sync \
-          ./build s3://<<parameters.bucket>>/  \
-          --cache-control "max-age=86400" \
-          --delete
+          aws s3 sync ./build s3://hideaway-leaderboard-frontend/
 
 workflows:
   production:
