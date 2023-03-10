@@ -42,6 +42,7 @@ workflows:
               only:
                 - prod
       - sync_s3:
+          context: hideaway-leaderboard
           bucket: hideaway-leaderboard-frontend
           requires:
             - build
