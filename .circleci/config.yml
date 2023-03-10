@@ -12,11 +12,10 @@ jobs:
         type: string
     steps:
       - checkout
-      - run: cd ./dashboard
-      - run: npm install
-      - run: npm run build
+      - run: npm install ./dashboard
+      - run: npm --prefix ./dashboard run build
       - persist_to_workspace:
-          root: .
+          root: dashboard
           paths:
             - build
 
@@ -31,20 +30,19 @@ jobs:
       - aws-cli/setup:
           profile-name: default
       - run: |
-          aws s3 sync \
-          ./build s3://<<parameters.bucket>>/  \
-          --cache-control "max-age=86400" \
-          --delete
+          aws s3 sync ./build s3://hideaway-leaderboard-frontend/
 
 workflows:
   production:
     jobs:
       - build:
+          env: prod
           filters:
             branches:
               only:
                 - prod
       - sync_s3:
+          context: hideaway-leaderboard
           bucket: hideaway-leaderboard-frontend
           requires:
             - build
