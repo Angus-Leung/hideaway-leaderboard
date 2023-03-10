@@ -1,8 +1,8 @@
 const Display = ({ name }) => {
   return (
     <img
-      className="dis"
-      alt="picsss"
+      className="profile-pictures"
+      alt="player-profile-pictures"
       src={`resources/playerPics/${
         playerMap[name.toLowerCase()] || playerMap["default"]
       }`}
@@ -23,6 +23,7 @@ const playerMap = {
   h4zed: "hazed.png",
   jam: "jam.png",
   thatswhatshezed: "fotus.png",
+  gambit: "jimmy.png",
   default: "leo_smash.png",
 };
 

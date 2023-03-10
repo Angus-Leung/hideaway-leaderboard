@@ -12,7 +12,11 @@ const Leaderboard = () => {
     <div className="leaderboardheader">
       <h2>Leaderboard</h2>
       <LeaderboardColumnHeader />
+
+    <div className="leaderboard-row-content">
+
       <LeaderboardContent />
+    </div>
     </div>
   );
 };
@@ -20,20 +24,20 @@ const Leaderboard = () => {
 const LeaderboardColumnHeader = () => {
   return (
     <div className="LeadColumnHeader">
-      <div className="col-xm-1">
+      <div className="rank-header">
         <h4>#</h4>
       </div>
-      <div className="col-xm-2">
+      <div className="elo-header">
         <h4>Elo</h4>
       </div>
-      <div className="col-xm-5">
+      <div className="player-header">
         <h4>Player</h4>
       </div>
-      <div className="col-xm-3">
+      <div className="rank-pic-header">
         <h4>Rank</h4>
       </div>
-      <div className="col-xm-6">
-        <img className="pic" src="resources/valo.png" alt="valo"></img>
+      <div className="expand-header">
+        <img className="valo-pic" src="resources/valo.png" alt="valo"></img>
       </div>
     </div>
   );
@@ -81,26 +85,26 @@ const LeaderboardContent = () => {
           tabIndex="0"
         >
           <div className="leaderboard-rows">
-            <div className="col-xs-1">
+            <div className="rank-col">
               <p className="player-row-rank">
                 {getRanking(index + 1, posts.length)}
               </p>
             </div>
-            <div className="col-xs-2">
+            <div className="elo-col">
               <p className="player-row-text">{player.elo}</p>
             </div>
-            <div className="col-xs-5">
+            <div className="player-name-col">
 
               <p className="player-row-text">{player.name}</p>
             </div>
-            <div className="col-xs-3">
+            <div className="rank-pic-col">
               <img
-                className="pics"
+                className="rank-pic"
                 src={`resources/valorantRanks/${player.rankUri}`}
                 alt="valRank"
               ></img>
             </div>
-            <div className="col-xs-4">
+            <div className="expand-col">
               <FontAwesomeIcon icon="fa-expand" />
             </div>
           </div>

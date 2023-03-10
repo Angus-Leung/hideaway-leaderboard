@@ -7,24 +7,32 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  overflow: auto;
+}
+
+.leaderboard-row-content{
+  height:100%;
+  overflow:hidden;
+}
+
+.react-frame{
+  border-style: solid;
 }
 
 .leaderboardheader {
   border-style: solid;
   border-color: rgb(0, 0, 0);
-  border-radius: 5px 5px 0 0;
 }
 
 .App-Leaderboard {
   width: 600px;
   height: 120px;
-  background-color: #282c34ad;
+  background-color: #05050670;
   display: flex;
   flex-direction: column;
   font-size: calc(8px + 2vmin);
   color: white;
   margin: 40px;
-  border-radius: 5px 5px 0 0;
 }
 
 .LeadColumnHeader {
@@ -32,7 +40,6 @@
   align-items: center;
   background: rgba(248, 248, 248, 0.772);
   color: black;
-  height: 50px;
   margin: 0px;
   justify-content: space-around;
   text-align: start;
@@ -64,30 +71,36 @@
   margin: 0px;
 }
 
-.col-xm-1 {
-  width: 10%;
+.rank-header {
+  width: 5%;
   padding-left: 35px;
 }
 
-.col-xm-2 {
+.elo-header {
+  padding-left: 35px;
   width: 20%;
+}
+
+.player-header {
+  width: 40%;
   padding-left: 5px;
 }
 
-.col-xm-5 {
-  width: 40%;
-  padding-left: 15px;
-}
-
-.col-xm-3 {
+.rank-pic-header {
   width: 15%;
 }
 
-.col-xm-6 {
-  padding-right: 5px;
+.expand-header {
+  padding-right: 0px;
 }
 
-.col-xs-1 {
+.leaderboard-rows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rank-col {
   width: 10%;
   display: flex;
   justify-content: center;
@@ -95,7 +108,7 @@
   margin: 0px;
 }
 
-.col-xs-2 {
+.elo-col {
   width: 15%;
   display: flex;
   align-items: flex-start;
@@ -103,68 +116,50 @@
   margin: 0px;
 }
 
-.col-xs-5 {
+.player-name-col {
   width: 40%;
   display: flex;
   padding-left: 40px;
   margin: 0px;
 }
 
-.col-xs-3 {
+.rank-pic-col {
   width: 10%;
   display: flex;
   margin: 0px;
   justify-content: center;
 }
 
-.col-xs-4 {
+.expand-col {
   width: 10%;
   display: flex;
   margin: 0px;
   justify-content: right;
 }
 
-.col-xs-6 {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 0px;
-  width: 70px;
-}
-
-
-
-.pics {
+.rank-pic {
   height: 50px;
   width: 50px;
 }
 
-.pic {
+.valo-pic {
   height: 30px;
   width: 48px;
   margin-top: 8px;
 }
 
-.leaderboard-rows{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 div#iframeprofile {
-  background-color: rgba(41, 45, 64, 0);
-  width: 500px;
-  height: 590px;
+  width: 580px;
+  height: 415px;
   overflow: hidden; /* hides horizontal scrollbar on newer browsers */
-  top: 100px;
-  right: 100px;
   border-style: solid;
   border-color: black;
-  justify-content: center;
-  align-items: center;
 }
-h4{
-  margin:0px
+
+h4 {
+  margin: 0px;
 }
+
 .player-clip {
   top: 250px;
   left: 50px;
@@ -178,32 +173,29 @@ h4{
 
 .iframe-profile-picture {
   position: relative;
-  height: 590px;
 }
 
-.iframe-div{
-  padding: 4px;
+.iframe-div {
+  padding-top: 4px;
   justify-content: center;
   display: flex;
+  width: 100%;
 }
 
 iframe#embed {
-  width: 1000px; /* set this to approximate width of entire page you're embedding */
-  height: 3000px; /* determines where the bottom of the page cuts off */
-  margin-top: -1500px; /* clipping top of page */
+  width: 1450px; /* set this to approximate width of entire page you're embedding */
+  height: 3600px; /* determines where the bottom of the page cuts off */
+  margin-top: -1900px; /* clipping top of page */
   margin-left: -2px;
-  overflow: hidden;
-  zoom: 0.5;
-  resize: none;
-  pointer-events: none;
-  touch-action: none;
+  zoom: 0.4;
+
 }
 
-.dis {
+.profile-pictures {
   position: absolute;
   top: 6px;
   right: 8px;
-  max-height: 110px;
+  max-height: 100px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -211,7 +203,7 @@ iframe#embed {
     background-image: url("https://rare-gallery.com/mocahbig/394521-valorant-game-agents-hero-4k-pc-wallpaper.jpg");
   }
 
-  .playercard{
+  .playercard {
     width: 900px;
     height: 3700px;
     margin-top: -2050px;
@@ -219,11 +211,9 @@ iframe#embed {
     overflow: hidden;
     zoom: 0.2;
     resize: none;
-    pointer-events: none;
-    touch-action: none;
   }
 
-  .leaderboardheader{
+  .leaderboardheader {
     width: 350px;
   }
 
@@ -232,106 +222,103 @@ iframe#embed {
     top: 6px;
     right: 0px;
     max-height: 90px;
-}
+  }
 
-iframe#embed {
-  width: 1700px;
-  height: 10000px;
-  margin-top: -4100px;
-  margin-left: -4px;
-  overflow: hidden;
-  zoom: 0.2;
-  resize: none;
-  pointer-events: none;
-  touch-action: none;
-}
+  iframe#embed {
+    width: 1700px;
+    height: 10000px;
+    margin-top: -4100px;
+    margin-left: -4px;
+    overflow: hidden;
+    zoom: 0.2;
+    resize: none;
+  }
 
-div#iframeprofile {
-  background-color: rgba(41, 45, 64, 0);
-  width: 500px;
-  height: 700px;
-  overflow: hidden;
-  top: 100px;
-  right: 100px;
-  border-style: solid;
-  border-color: black;
-  justify-content: center;
-  align-items: center;
-}
+  div#iframeprofile {
+    background-color: rgba(41, 45, 64, 0);
+    width: 500px;
+    height: 700px;
+    overflow: hidden;
+    top: 100px;
+    right: 100px;
+    border-style: solid;
+    border-color: black;
+    justify-content: center;
+    align-items: center;
+  }
 
-.col-xm-1 {
-  width: 10%;
-  display: flex;
-  justify-content: center;
-  padding-left: 5px;
-  margin: 0px;
-}
+  .rank-header {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    padding-left: 5px;
+    margin: 0px;
+  }
 
-.col-xm-2 {
-  width: 15%;
-  display: flex;
-  align-items: flex-start;
-  padding-left: 25px;
-  margin: 0px;
-}
+  .elo-header {
+    width: 15%;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 25px;
+    margin: 0px;
+  }
 
-.col-xm-5 {
-  width: 40%;
-  display: flex;
-  padding-left: 20px;
-  margin: 0px;
-}
+  .player-header {
+    width: 40%;
+    display: flex;
+    padding-left: 20px;
+    margin: 0px;
+  }
 
-.col-xm-3 {
-  width: 10%;
-  display: flex;
-  margin: 0px;
-  justify-content: center;
-}
+  .rank-header {
+    width: 10%;
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+  }
 
-.col-xm-6 {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 0px;
-  width: 70px;
-}
+  .expand-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0px;
+    width: 70px;
+  }
 
-.col-xs-1 {
-  width: 10%;
-  display: flex;
-  justify-content: center;
-  padding-left: 5px;
-  margin: 0px;
-}
+  .rank-col {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    padding-left: 5px;
+    margin: 0px;
+  }
 
-.col-xs-2 {
-  width: 15%;
-  display: flex;
-  align-items: flex-start;
-  padding-left: 25px;
-  margin: 0px;
-}
+  .elo-col {
+    width: 15%;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 25px;
+    margin: 0px;
+  }
 
-.col-xs-5 {
-  width: 40%;
-  display: flex;
-  padding-left: 10px;
-  margin: 0px;
-}
+  .player-name-col {
+    width: 40%;
+    display: flex;
+    padding-left: 10px;
+    margin: 0px;
+  }
 
-.col-xs-3 {
-  width: 10%;
-  display: flex;
-  margin: 0px;
-  padding-right: 10px;
-  justify-content: center;
-}
+  .rank-pic-col {
+    width: 10%;
+    display: flex;
+    margin: 0px;
+    padding-right: 10px;
+    justify-content: center;
+  }
 
-.col-xs-4 {
-  width: 10%;
-  display: flex;
-  margin: 0px;
-  justify-content: center;
-}
-
+  .expand-col {
+    width: 10%;
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+  }
 }
