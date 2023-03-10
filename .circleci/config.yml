@@ -1,0 +1,52 @@
+version: 2.1
+
+orbs:
+  aws-cli: circleci/aws-cli@2.0
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:16.13.2
+    parameters:
+      env:
+        type: string
+    steps:
+      - checkout
+      - run: npm install ./dashboard
+      - run: npm --prefix ./dashboard run build
+      - persist_to_workspace:
+          root: dashboard
+          paths:
+            - build
+
+  sync_s3:
+    executor: aws-cli/default
+    parameters:
+      bucket:
+        type: string
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - aws-cli/setup:
+          profile-name: default
+      - run: |
+          aws s3 sync ./build s3://hideaway-leaderboard-frontend/
+
+workflows:
+  production:
+    jobs:
+      - build:
+          env: prod
+          filters:
+            branches:
+              only:
+                - prod
+      - sync_s3:
+          context: hideaway-leaderboard
+          bucket: hideaway-leaderboard-frontend
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - prod
