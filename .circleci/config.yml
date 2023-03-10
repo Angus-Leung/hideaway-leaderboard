@@ -12,9 +12,8 @@ jobs:
         type: string
     steps:
       - checkout
-      - run: cd ./dashboard
-      - run: npm install
-      - run: npm run build
+      - run: npm install ./dashboard
+      - run: npm --prefix ./dashboard run build
       - persist_to_workspace:
           root: .
           paths:
