@@ -174,10 +174,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-  body {
-    background-image: url("https://rare-gallery.com/mocahbig/394521-valorant-game-agents-hero-4k-pc-wallpaper.jpg");
-  }
-
   .App-Leaderboard {
     height: 120px;
     margin: 40px;
@@ -187,85 +183,32 @@
     width: 350px;
   }
 
-  .dis {
-    position: absolute;
-    top: 6px;
-    right: 0px;
-    max-height: 90px;
-  }
-
   .rank-header {
-    width: 10%;
-    display: flex;
-    justify-content: center;
     padding-left: 5px;
-    margin: 0px;
   }
 
   .elo-header {
-    width: 15%;
-    display: flex;
-    align-items: flex-start;
     padding-left: 25px;
-    margin: 0px;
-  }
-
-  .player-header {
-    width: 40%;
-    display: flex;
-    padding-left: 20px;
-    margin: 0px;
   }
 
   .rank-header {
     width: 10%;
-    display: flex;
-    margin: 0px;
-    justify-content: center;
   }
 
   .expand-header {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 0px;
-    width: 70px;
-  }
-
-  .rank-col {
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    padding-left: 5px;
-    margin: 0px;
-  }
-
-  .elo-col {
-    width: 15%;
-    display: flex;
-    align-items: flex-start;
-    padding-left: 25px;
-    margin: 0px;
+    padding-left: 10px;
+    width: 50px;
   }
 
   .player-name-col {
-    width: 40%;
-    display: flex;
     padding-left: 10px;
-    margin: 0px;
   }
 
   .rank-pic-col {
-    width: 10%;
-    display: flex;
-    margin: 0px;
     padding-right: 10px;
-    justify-content: center;
   }
 
   .expand-col {
-    width: 10%;
-    display: flex;
-    margin: 0px;
-    justify-content: center;
+    padding-right: 5px;
   }
 }

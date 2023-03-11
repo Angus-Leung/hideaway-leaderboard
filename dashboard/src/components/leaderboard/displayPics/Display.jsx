@@ -24,7 +24,7 @@ const playerMap = {
   bakedassh0le: "bobling.png",
   h4zed: "hazed.png",
   jam: "jam.png",
-  thatswhatshezed: "fotus.png",
+  thatswhatshezed: "fotus_flash.png",
   gambit: "jimmy.png",
   default: "leo_smash.png",
 };

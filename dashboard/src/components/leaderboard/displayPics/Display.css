@@ -8,3 +8,12 @@
 .iframe-profile-picture {
   position: relative;
 }
+
+@media only screen and (max-width: 900px) {
+  .profile-pictures {
+    position: absolute;
+    top: 6px;
+    right: 0px;
+    max-height: 90px;
+  }
+}
