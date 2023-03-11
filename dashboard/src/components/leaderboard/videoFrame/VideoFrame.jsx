@@ -15,7 +15,7 @@ const clip = {
   jam: "7OSON07MXHY",
   thatswhatshezed: "-DEJKwTUQuY",
   cros92: "sgdA-j6D8wo",
-  gambit: "TMnQQutXIBs",
+  gambit: "8IGvhK7Hylg",
   "1milk5sugar": "tVf_wEePfZg",
   default: "leo",
 };
