@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+@media only screen and (max-width: 3840px) {
+  .leaderboard-row-content {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .leaderboardheader {
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+  }
+
+  .LeadColumnHeader {
+    display: flex;
+    align-items: center;
+    background: rgba(248, 248, 248, 0.772);
+    color: black;
+    margin: 0px;
+    justify-content: space-around;
+    text-align: start;
+  }
+
+  .LeaderContent {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background: white;
+    position: relative;
+  }
+
+  .LeaderContent:nth-child(odd) {
+    background-color: rgba(220, 219, 219, 0.766);
+  }
+
+  .LeaderContent:nth-child(even) {
+    background-color: rgba(150, 150, 150, 0.9);
+  }
+
+  .player-row-text {
+    font-family: monospace;
+    font-weight: lighter;
+    margin: 0px;
+  }
+
+  .player-row-rank {
+    padding-right: 10px;
+    margin: 0px;
+  }
+
+  .rank-header {
+    width: 5%;
+    padding-left: 35px;
+  }
+
+  .elo-header {
+    width: 15%;
+  }
+
+  .player-header {
+    width: 30%;
+  }
+
+  .rank-pic-header {
+    width: 10%;
+    padding-left: 40px;
+  }
+
+  .leaderboard-rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rank-col {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    padding-left: 5px;
+    margin: 0px;
+  }
+
+  .elo-col {
+    width: 15%;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 25px;
+    margin: 0px;
+  }
+
+  .player-name-col {
+    width: 40%;
+    display: flex;
+    padding-left: 40px;
+    margin: 0px;
+  }
+
+  .rank-pic-col {
+    width: 10%;
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+  }
+
+  .expand-col {
+    width: 10%;
+    display: flex;
+    margin: 0px;
+    justify-content: right;
+  }
+
+  .rank-pic {
+    height: 50px;
+    width: 50px;
+  }
+
+  .valo-pic {
+    height: 30px;
+    width: 48px;
+    margin-top: 8px;
+  }
+
+  h4 {
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .rank-header {
+    padding-left: 16px;
+  }
+
+  .elo-header {
+    padding-left: 20px;
+  }
+
+  .player-header {
+    padding-left: 20px;
+  }
+
+  .expand-col {
+    justify-content: center;
+    padding-left: 6px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .leaderboardheader {
+    width: 350px;
+  }
+
+  .rank-header {
+    padding-left: 5px;
+  }
+
+  .elo-header {
+    padding-left: 25px;
+  }
+
+  .rank-header {
+    width: 10%;
+  }
+
+  .expand-header {
+    padding-left: 10px;
+    width: 50px;
+  }
+
+  .player-name-col {
+    padding-left: 10px;
+  }
+
+  .rank-pic-col {
+    padding-right: 10px;
+  }
+
+  .expand-col {
+    padding-right: 5px;
+  }
+}

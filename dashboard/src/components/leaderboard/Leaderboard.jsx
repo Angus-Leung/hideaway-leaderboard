@@ -1,10 +1,14 @@
-import { useState, useEffect } from "react";
-import IFrame from "./iframe/IFrame";
-import React from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExpand } from "@fortawesome/free-solid-svg-icons";
-import ClipFrame from "./videoFrame/VideoFrame";
+import { useState, useEffect } from "react";
+
+import IFrame from "../iframe/IFrame";
+import React from "react";
+import ClipFrame from "../videoFrame/VideoFrame";
+
+import "./Leaderboard.css";
+
 library.add(faExpand);
 
 const Leaderboard = () => {
