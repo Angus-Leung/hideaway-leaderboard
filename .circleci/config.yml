@@ -30,7 +30,7 @@ jobs:
       - aws-cli/setup:
           profile-name: default
       - run: |
-          aws s3 sync ./build s3://hideaway-leaderboard-frontend/
+          aws s3 sync ./build s3://hideaway-leaderboard.leedro.ca/
 
 workflows:
   production:
@@ -43,7 +43,7 @@ workflows:
                 - prod
       - sync_s3:
           context: hideaway-leaderboard
-          bucket: hideaway-leaderboard-frontend
+          bucket: hideaway-leaderboard.leedro.ca
           requires:
             - build
           filters:
