@@ -4,7 +4,6 @@ gamers = [
     {"name": "h4zed", "tag": "613"},
     {"name": "hydro", "tag": "5353"},
     {"name": "jam", "tag": "na1"},
-    {"name": "liyung", "tag": "613"},
     {"name": "bakedassh0le", "tag": "1819"},
     {"name": "xmanj", "tag": "12345"},
     {"name": "gambit", "tag": "9940"},
