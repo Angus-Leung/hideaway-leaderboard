@@ -8,6 +8,7 @@ gamers = [
     {"name": "xmanj", "tag": "12345"},
     {"name": "gambit", "tag": "9940"},
     {"name": "cg1151", "tag": "5826"},
+    {"name": "liyung", "tag": "613"},
     {"name": "plonk", "tag": "uwu"},
     {"name": "awais", "tag": "613"},
     {"name": "cros92", "tag": "na1"},
