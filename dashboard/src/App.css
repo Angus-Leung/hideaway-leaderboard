@@ -33,6 +33,7 @@
 @media only screen and (max-width: 900px) {
   .App-Leaderboard {
     height: 120px;
+    width: 355px;
     margin: 40px;
   }
 }
